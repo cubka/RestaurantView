@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.google.gson.Gson;
@@ -24,14 +25,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        RestoranAdapter adapter = new RestoranAdapter(this) {
+        RestoranAdapter adapter = new RestoranAdapter(this);
+        adapter.setItems(generateList());
+
+        myRecyclerView.setHasFixedSize(true);
+        myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        myRecyclerView.setAdapter(adapter);
 
 
+    }
             ArrayList<Restoran> generateList() {
 
                 Restorani restorani = new Gson().fromJson(imagesJson, Restorani.class);
                 return restorani.restorans;
-
 
             }
 
@@ -202,6 +208,5 @@ public class MainActivity extends AppCompatActivity {
                     "    ]\n" +
                     "  }\n" +
                     "]}\n";
-        };
-    }
+
 }
