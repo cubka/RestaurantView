@@ -7,5 +7,5 @@ import java.util.ArrayList;
  */
 
 public class Restorani  {
-    public ArrayList<Restoran> restorans;
+    public ArrayList<Restoran> restaurants;
 }

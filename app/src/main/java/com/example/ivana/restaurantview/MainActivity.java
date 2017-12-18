@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<Restoran> generateList() {
 
                 Restorani restorani = new Gson().fromJson(imagesJson, Restorani.class);
-                return restorani.restorans;
+                return restorani.restaurants;
 
             }
 
