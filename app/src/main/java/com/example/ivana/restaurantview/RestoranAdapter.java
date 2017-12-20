@@ -68,7 +68,9 @@ public class RestoranAdapter extends RecyclerView.Adapter<RestoranAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return restoranList.size();
+        if(restoranList!=null)
+            return restoranList.size();
+        else return 0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

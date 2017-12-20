@@ -11,7 +11,7 @@
         android:id="@+id/detaliSlika"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@android:color/holo_purple"/>
+        />
     <TextView
         android:id="@+id/detaliIme"
         android:layout_width="wrap_content"
@@ -28,6 +28,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:id="@+id/detaliOcena"
         android:layout_below="@+id/detaliSlika"
         android:layout_toRightOf="@+id/detaliGrad"/>
