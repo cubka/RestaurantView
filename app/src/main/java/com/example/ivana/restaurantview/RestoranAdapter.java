@@ -22,14 +22,16 @@ import butterknife.ButterKnife;
 
 public class RestoranAdapter extends RecyclerView.Adapter<RestoranAdapter.ViewHolder> {
     Context context;
+    OnRestranClickListener onRestranClickListener;
 
     List<Restoran> restoranList = new ArrayList<>();
 
     public void setItems (List<Restoran> restoranList1){
         restoranList = restoranList1;
     }
-    public RestoranAdapter (Context _context ){
+    public RestoranAdapter(Context _context, OnRestranClickListener _onRestranClickListener){
         context=_context;
+        onRestranClickListener = _onRestranClickListener;
     }
 
     @Override

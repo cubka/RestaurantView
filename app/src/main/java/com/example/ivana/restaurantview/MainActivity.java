@@ -3,13 +3,9 @@ package com.example.ivana.restaurantview;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
-
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -30,7 +26,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        adapter = new RestoranAdapter(this);
+        adapter = new RestoranAdapter(this, new OnRestranClickListener() {
+            @Override
+            public void onRowClick(Restoran restoran) {
+
+            }
+        });
         adapter.setItems(generateList());
 
         myRecyclerView.setHasFixedSize(true);
