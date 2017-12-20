@@ -26,7 +26,7 @@ public class PreferencesManager {
 
     public static Restorani getRestoran(Context c){
 
-        return new Gson().fromJson(getPreferences(c).getString("Restorani", ""), Restorani.class);
+        return new Gson().fromJson(getPreferences(c).getString("Restorani", restaurants), Restorani.class);
     }
 
     public static String restaurants ="{\"restaurants\": [\n" +

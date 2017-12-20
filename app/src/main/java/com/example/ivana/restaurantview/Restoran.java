@@ -14,8 +14,6 @@ public class Restoran  {
     public String rating;
     public ArrayList <Menu> menu;
 
-    public Restoran() {
-    }
 
     public String getLogo() {
         return logo;
