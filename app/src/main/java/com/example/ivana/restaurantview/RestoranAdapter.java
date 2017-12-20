@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -51,9 +52,15 @@ public class RestoranAdapter extends RecyclerView.Adapter<RestoranAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Restoran restorant = restoranList.get(position);
+        final Restoran restorant = restoranList.get(position);
         holder.restoranIme.setText(restorant.name);
         holder.restoranOcena.setText(restorant.rating);
+        holder.laymain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onRestranClickListener.onRowClick(restorant);
+            }
+        });
 
         Picasso.with(context).load(restorant.getLogo()).centerInside().fit().into(holder.restoranSlika);
 
@@ -71,6 +78,8 @@ public class RestoranAdapter extends RecyclerView.Adapter<RestoranAdapter.ViewHo
         TextView restoranOcena;
         @BindView(R.id.slikaNaRestoran)
         ImageView restoranSlika;
+        @BindView(R.id.lin)
+        LinearLayout laymain;
 
         public ViewHolder(View itemView) {
             super(itemView);

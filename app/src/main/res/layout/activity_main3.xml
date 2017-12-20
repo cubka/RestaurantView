@@ -10,23 +10,36 @@
     <ImageView
         android:id="@+id/detaliSlika"
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="150dp"
+        android:background="@android:color/holo_purple"/>
     <TextView
         android:id="@+id/detaliIme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detaliSlika"/>
+        android:layout_below="@+id/detaliSlika"
+
+        />
     <TextView
         android:id="@+id/detaliGrad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detaliSlika"
+        android:layout_below="@+id/detaliSlika"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/detaliOcena"
         android:layout_below="@+id/detaliSlika"
-        android:layout_toRightOf="@id/detaliGrad"/>
+        android:layout_toRightOf="@+id/detaliGrad"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/menuview"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/detaliGrad">
+
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

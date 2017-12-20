@@ -1,12 +1,13 @@
 package com.example.ivana.restaurantview;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Ivana on 12/18/2017.
  */
 
-public class Restoran  {
+public class Restoran implements Serializable {
 
     public String logo;
     public String city;

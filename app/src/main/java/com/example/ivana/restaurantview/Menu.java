@@ -1,10 +1,12 @@
 package com.example.ivana.restaurantview;
 
+import java.io.Serializable;
+
 /**
  * Created by Ivana on 12/18/2017.
  */
 
-public class Menu  {
+public class Menu implements Serializable {
 
     public String link;
     public String price;
