@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ivana.restaurantview.AddMenu">
+
+
+    <ImageView
+        android:id="@+id/menuDodadenaSlika"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@android:drawable/star_big_off"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/dodadenoImeMeni"
+        android:layout_marginTop="20dp"
+        android:hint="Add Name"
+        android:layout_below="@+id/menuDodadenaSlika"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/dodadenaCenaMeni"
+        android:layout_marginTop="30dp"
+        android:hint="Add Price"
+        android:layout_below="@+id/dodadenoImeMeni"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dodadenaVrednostVegan"
+        android:text="Is Vegan"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@id/dodadenaCenaMeni"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveNewMenu"
+        android:text="Save Menu"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

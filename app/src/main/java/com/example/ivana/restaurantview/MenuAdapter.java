@@ -64,9 +64,9 @@ import butterknife.ButterKnife;
 
     @Override
     public int getItemCount() {
-        if(menuList!=null)
-        return menuList.size();
-        else return 0;
+            if(menuList == null)
+                return 0;
+            return menuList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

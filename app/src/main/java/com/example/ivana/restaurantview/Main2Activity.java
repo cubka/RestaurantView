@@ -11,7 +11,7 @@ import butterknife.OnClick;
 
 public class Main2Activity extends AppCompatActivity {
 
-    private Restorani restorani;
+      private Restorani restorani;
 
     @BindView(R.id.dodajName)
     EditText dodadenoIme;

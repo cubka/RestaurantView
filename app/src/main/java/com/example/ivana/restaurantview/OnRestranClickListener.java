@@ -5,5 +5,5 @@ package com.example.ivana.restaurantview;
  */
 
 public interface OnRestranClickListener {
-    public void onRowClick (Restoran restoran);
+    public void onRowClick (Restoran restoran, int position);
 }

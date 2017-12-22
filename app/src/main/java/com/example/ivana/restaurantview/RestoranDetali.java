@@ -1,10 +1,12 @@
 package com.example.ivana.restaurantview;
 
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class RestoranDetali extends AppCompatActivity {
 
@@ -30,6 +33,7 @@ public class RestoranDetali extends AppCompatActivity {
     RecyclerView menuRecycler;
     private MenuAdapter menuAdapter;
     Restoran restorandetali;
+    int res_pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,30 +42,48 @@ public class RestoranDetali extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        if (intent.hasExtra("extra")) {
+        if (intent.hasExtra("extra" )) {
 
-           restorandetali = (Restoran) intent.getSerializableExtra("extra");
+            restorandetali = (Restoran) intent.getSerializableExtra("extra");
+            res_pos = intent.getIntExtra("_pozicija",0);
 
-            Picasso.with(this).load(restorandetali.getLogo().toString()).centerInside().fit().into(restoranDetaliSlika);
+
+            if (restorandetali.getLogo() != null && !restorandetali.getLogo().isEmpty())
+                Picasso.with(this).load(restorandetali.getLogo().toString()).centerInside().fit().into(restoranDetaliSlika);
 
             restoranDetaliIme.setText(restorandetali.getName());
             restoranDetaliGrad.setText(restorandetali.getCity());
             restoranDetaliOcena.setText(restorandetali.getRating());
-
 
         }
 
         menuAdapter = new MenuAdapter(this);
         menuAdapter.setItems(generateList());
 
-       menuRecycler.setHasFixedSize(true);
+        menuRecycler.setHasFixedSize(true);
         menuRecycler.setLayoutManager(new LinearLayoutManager(this));
         menuRecycler.setAdapter(menuAdapter);
     }
 
-    ArrayList<Menu>generateList(){
+    ArrayList<Menu> generateList() {
         return restorandetali.getMenu();
     }
 
+    @OnClick(R.id.addMenu)
+    public void addMeni(View view) {
+        Intent intent = new Intent(this, AddMenu.class);
+        intent.putExtra("pos",res_pos);
+        startActivityForResult(intent, 1001);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1001) {
+            restorandetali= PreferencesManager.getRestoran(this).restaurants.get(res_pos);
+            menuAdapter.setItems(generateList());
+            menuAdapter.notifyDataSetChanged();
+
+        }
+    }
 }

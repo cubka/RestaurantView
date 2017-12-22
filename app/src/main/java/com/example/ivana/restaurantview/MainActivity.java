@@ -28,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new RestoranAdapter(this, new OnRestranClickListener() {
             @Override
-            public void onRowClick(Restoran restoran) {
+            public void onRowClick(Restoran restoran, int position) {
                 Intent intent = new Intent(MainActivity.this, RestoranDetali.class);
                 intent.putExtra("extra", restoran);
+                intent.putExtra("_pozicija", position);
                 startActivity(intent);
 
             }

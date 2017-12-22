@@ -51,14 +51,14 @@ public class RestoranAdapter extends RecyclerView.Adapter<RestoranAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         final Restoran restorant = restoranList.get(position);
         holder.restoranIme.setText(restorant.name);
         holder.restoranOcena.setText(restorant.rating);
         holder.laymain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onRestranClickListener.onRowClick(restorant);
+                onRestranClickListener.onRowClick(restorant, position);
             }
         });
 
@@ -68,9 +68,9 @@ public class RestoranAdapter extends RecyclerView.Adapter<RestoranAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        if(restoranList!=null)
+
             return restoranList.size();
-        else return 0;
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
