@@ -12,7 +12,7 @@ import com.google.gson.Gson;
 public class PreferencesManager {
 
     private static SharedPreferences getPreferences(Context c){
-        return c.getApplicationContext().getSharedPreferences("MyRestorants", MainActivity.MODE_PRIVATE);
+        return c.getApplicationContext().getSharedPreferences("MyRestorants", ListaRestorani.MODE_PRIVATE);
     }
 
     public static void addRestoran(Restorani restorani, Context c){

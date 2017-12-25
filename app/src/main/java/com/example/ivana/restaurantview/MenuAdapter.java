@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -23,12 +24,14 @@ import butterknife.ButterKnife;
    public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder>{
 
        Context context;
+    OnMenuClickListener onMenuClickListener;
        List<Menu> menuList = new ArrayList<>();
     public void setItems (List<Menu> menuList1){
         menuList = menuList1;
     }
-    public MenuAdapter(Context _context) {
+    public MenuAdapter(Context _context, OnMenuClickListener _onMenuClickListener) {
         context = _context;
+        onMenuClickListener = _onMenuClickListener;
     }
 
 
@@ -46,8 +49,8 @@ import butterknife.ButterKnife;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-         Menu menu = menuList.get(position);
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+         final Menu menu = menuList.get(position);
          holder.meniIme.setText(menu.foodname);
          holder.meniCena.setText(menu.price);
 
@@ -57,6 +60,13 @@ import butterknife.ButterKnife;
          else {
              holder.meniVegan.setText("Ne e Vegan");
          }
+         holder.menu_linear.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 onMenuClickListener.onMenuClick(menu, position);
+
+             }
+         });
 
         Picasso.with(context).load(menu.getLink()).centerInside().fit().into(holder.meniSlika);
 
@@ -79,6 +89,8 @@ import butterknife.ButterKnife;
         TextView meniCena;
         @BindView(R.id.menuVegan)
         TextView meniVegan;
+        @BindView(R.id.lin2)
+        LinearLayout menu_linear;
         public ViewHolder(View itemView) {
 
 

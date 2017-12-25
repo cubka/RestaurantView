@@ -42,10 +42,10 @@ public class RestoranDetali extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        if (intent.hasExtra("extra" )) {
+        if (intent.hasExtra("extra")) {
 
             restorandetali = (Restoran) intent.getSerializableExtra("extra");
-            res_pos = intent.getIntExtra("_pozicija",0);
+            res_pos = intent.getIntExtra("_pozicija", 0);
 
 
             if (restorandetali.getLogo() != null && !restorandetali.getLogo().isEmpty())
@@ -57,7 +57,16 @@ public class RestoranDetali extends AppCompatActivity {
 
         }
 
-        menuAdapter = new MenuAdapter(this);
+        menuAdapter = new MenuAdapter(this, new OnMenuClickListener() {
+            @Override
+            public void onMenuClick(Menu menu, int _position) {
+                Intent menu_intent = new Intent(RestoranDetali.this, MenuDetali.class);
+                menu_intent.putExtra("menu", menu);
+                menu_intent.putExtra("res_position", res_pos);
+                menu_intent.putExtra("menu_pos", _position);
+                startActivityForResult(menu_intent,1001);
+            }
+        });
         menuAdapter.setItems(generateList());
 
         menuRecycler.setHasFixedSize(true);
@@ -72,7 +81,7 @@ public class RestoranDetali extends AppCompatActivity {
     @OnClick(R.id.addMenu)
     public void addMeni(View view) {
         Intent intent = new Intent(this, AddMenu.class);
-        intent.putExtra("pos",res_pos);
+        intent.putExtra("pos", res_pos);
         startActivityForResult(intent, 1001);
     }
 
@@ -80,9 +89,11 @@ public class RestoranDetali extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1001) {
-            restorandetali= PreferencesManager.getRestoran(this).restaurants.get(res_pos);
+            restorandetali = PreferencesManager.getRestoran(this).restaurants.get(res_pos);
+
             menuAdapter.setItems(generateList());
             menuAdapter.notifyDataSetChanged();
+
 
         }
     }

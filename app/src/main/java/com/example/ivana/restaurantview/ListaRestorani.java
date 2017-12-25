@@ -13,7 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class ListaRestorani extends AppCompatActivity {
 
     @BindView(R.id.recView)
     RecyclerView myRecyclerView;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new RestoranAdapter(this, new OnRestranClickListener() {
             @Override
             public void onRowClick(Restoran restoran, int position) {
-                Intent intent = new Intent(MainActivity.this, RestoranDetali.class);
+                Intent intent = new Intent(ListaRestorani.this, RestoranDetali.class);
                 intent.putExtra("extra", restoran);
                 intent.putExtra("_pozicija", position);
                 startActivity(intent);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
     @OnClick(R.id.addRest)
     public void addRestoran(View view){
-        Intent intent = new Intent(this, Main2Activity.class);
+        Intent intent = new Intent(this, AddRestorani.class);
         startActivityForResult(intent,1000);
     }
 
