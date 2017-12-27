@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/leaf_brown"
     tools:context="com.example.ivana.restaurantview.ListaRestorani">
 
     <android.support.v7.widget.RecyclerView
@@ -16,9 +17,11 @@
 
     <Button
         android:id="@+id/addRest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add +"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:text="+"
+        android:textColor="@color/dark_red"
+        android:background="@color/sand"
         android:layout_alignParentBottom="true"/>
 
 

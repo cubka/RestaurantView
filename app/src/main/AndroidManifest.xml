@@ -22,6 +22,7 @@
         <activity android:name=".RestoranDetali" />
         <activity android:name=".AddMenu" />
         <activity android:name=".MenuDetali"></activity>
+        <activity android:name=".MainNavigationActivity"></activity>
     </application>
 
 </manifest>

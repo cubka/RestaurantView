@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="sand">#D0BB7D</color>
+    <color name="leaf_brown">#685D3E</color>
+    <color name="dark_red">#470606</color>
+    <color name="sakura">#BD7E7E</color>
 </resources>

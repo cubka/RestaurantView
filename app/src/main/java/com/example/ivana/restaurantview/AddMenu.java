@@ -36,7 +36,7 @@ public class AddMenu extends AppCompatActivity {
     Button save_new_menu;
     int menu_pos;
     Intent i;
-    Menu eddMenu;
+    Menu oldMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +51,14 @@ public class AddMenu extends AppCompatActivity {
 
                if (i.hasExtra("edd")){
 
-                   newMenu = (Menu) i.getSerializableExtra("edd");
+                   oldMenu = (Menu) i.getSerializableExtra("edd");
             restoran_pos = i.getIntExtra("edd_r_pos",0);
             menu_pos = i.getIntExtra("edd_m_pos",0);
-                   dodadenoMIme.setText(newMenu.getFoodname().toString());
-                   dodadenaMCena.setText(newMenu.getPrice().toString());
+                   dodadenoMIme.setText(oldMenu.getFoodname().toString());
+                   dodadenaMCena.setText(oldMenu.getPrice().toString());
 
-                   if (newMenu.getLink() != null && !newMenu.getLink().isEmpty())
-                   Picasso.with(this).load(newMenu.getLink().toString()).centerInside().fit().into(dodadenaMSlika);
+//                   if (oldMenu.getLink() != null && !oldMenu.getLink().isEmpty())
+//                   Picasso.with(this).load(oldMenu.getLink().toString()).centerInside().fit().into(dodadenaMSlika);
 
 
                }
@@ -70,8 +70,7 @@ public class AddMenu extends AppCompatActivity {
            newMenu = new Menu();
            newMenu.setFoodname(dodadenoMIme.getText().toString());
            newMenu.setPrice(dodadenaMCena.getText().toString());
-           if (newMenu.getLink() != null && !newMenu.getLink().isEmpty())
-               Picasso.with(this).load(newMenu.getLink().toString()).centerInside().fit().into(dodadenaMSlika);
+            newMenu.setLink("https://pbs.twimg.com/profile_images/2215476833/homa_logo_400x400.png");
 
            if (isVeganCheck.isChecked()) {
                newMenu.setIsveg(true);
@@ -98,6 +97,7 @@ public class AddMenu extends AppCompatActivity {
         newMenu = new Menu();
         newMenu.setFoodname(dodadenoMIme.getText().toString());
         newMenu.setPrice(dodadenaMCena.getText().toString());
+        newMenu.setLink(oldMenu.getLink());
         if (newMenu.getLink() != null && !newMenu.getLink().isEmpty())
             Picasso.with(this).load(newMenu.getLink().toString()).centerInside().fit().into(dodadenaMSlika);
 

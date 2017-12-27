@@ -96,5 +96,13 @@ public class RestoranDetali extends AppCompatActivity {
 
 
         }
+
+    }
+    @OnClick(R.id.galery)
+    public void enterGalery (View viewGalery){
+
+        Intent galery = new Intent(RestoranDetali.this,MainNavigationActivity.class);
+        galery.putExtra("gp",res_pos);
+        startActivity(galery);
     }
 }

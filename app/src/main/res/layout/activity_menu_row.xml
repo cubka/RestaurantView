@@ -9,6 +9,7 @@
         android:id="@+id/lin2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/sakura"
         android:orientation="horizontal">
 
 
@@ -21,15 +22,21 @@
             android:id="@+id/menuCena"
             android:layout_gravity="top|center_vertical"
             android:layout_width="wrap_content"
+            android:textColor="@color/dark_red"
+            android:textStyle="bold"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/menuIme"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
+            android:textColor="@color/dark_red"
+            android:textStyle="bold|italic"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/menuVegan"
             android:layout_gravity="right|bottom"
+            android:textColor="@color/dark_red"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -38,7 +45,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/black"
         android:layout_below="@+id/lin2"
        >
 
