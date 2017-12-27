@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/edna"
     tools:context="com.example.ivana.restaurantview.AddMenu">
 
 
@@ -31,6 +32,7 @@
         android:id="@+id/dodadenaCenaMeni"
         android:layout_marginTop="30dp"
         android:hint="Add Price"
+        android:inputType="numberDecimal"
         android:layout_below="@+id/dodadenoImeMeni"/>
 
     <CheckBox
@@ -41,19 +43,24 @@
         android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:textStyle="bold"
+        android:textColor="@color/leaf_brown"
         android:layout_below="@id/dodadenaCenaMeni"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/saveNewMenu"
         android:text="Save Menu"
+        android:background="@color/transedna"
+        android:textColor="@color/leaf_brown"
         android:layout_alignParentBottom="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/save_edd_menu"
-        android:layout_marginLeft="285dp"
-        android:text="Eddit Menu"
+        android:text="edit Menu"
+        android:textColor="@color/leaf_brown"
+        android:background="@color/transedna"
+        android:layout_marginLeft="280dp"
         android:layout_alignParentBottom="true"/>
 
 

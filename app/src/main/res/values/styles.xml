@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/sand</item>
         <item name="colorPrimaryDark">@color/leaf_brown</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/leaf_brown</item>
+        <item name="titleTextColor">@color/leaf_brown</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

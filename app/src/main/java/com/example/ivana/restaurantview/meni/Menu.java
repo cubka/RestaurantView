@@ -1,4 +1,4 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.meni;
 
 import java.io.Serializable;
 

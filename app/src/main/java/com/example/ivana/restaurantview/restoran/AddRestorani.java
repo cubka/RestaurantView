@@ -1,9 +1,11 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.restoran;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+
+import com.example.ivana.restaurantview.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

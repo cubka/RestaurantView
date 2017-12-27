@@ -1,6 +1,6 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.restoran;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
 
 /**
  * Created by Ivana on 12/18/2017.

@@ -1,11 +1,13 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.restoran;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.example.ivana.restaurantview.R;
 
 import java.util.ArrayList;
 

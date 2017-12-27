@@ -1,14 +1,21 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.meni;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+
+import com.example.ivana.restaurantview.MenuDetali;
+import com.example.ivana.restaurantview.R;
+
+import com.example.ivana.restaurantview.restoran.PreferencesManager;
+import com.example.ivana.restaurantview.restoran.Restorani;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -35,6 +42,8 @@ public class AddMenu extends AppCompatActivity {
     @BindView(R.id.saveNewMenu)
     Button save_new_menu;
     int menu_pos;
+    @BindView(R.id.save_edd_menu)
+            Button saveEdMenu;
     Intent i;
     Menu oldMenu;
 
@@ -72,9 +81,12 @@ public class AddMenu extends AppCompatActivity {
            newMenu.setPrice(dodadenaMCena.getText().toString());
             newMenu.setLink("https://pbs.twimg.com/profile_images/2215476833/homa_logo_400x400.png");
 
+
            if (isVeganCheck.isChecked()) {
                newMenu.setIsveg(true);
            } else newMenu.setIsveg(false);
+
+
 
 
        ArrayList<Menu> menus = restorani.restaurants.get(restoran_pos).getMenu();
@@ -93,6 +105,7 @@ public class AddMenu extends AppCompatActivity {
 
     @OnClick(R.id.save_edd_menu)
     public void s (View v) {
+
 
         newMenu = new Menu();
         newMenu.setFoodname(dodadenoMIme.getText().toString());

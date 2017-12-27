@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dve"
     tools:context="com.example.ivana.restaurantview.RestoranDetali">
 
 
@@ -53,6 +54,11 @@
         android:layout_marginRight="31dp"
         android:layout_marginTop="5dp"
         android:text="Galery" />
+    <Button
+        android:id="@+id/edit_restoran"
+        android:layout_width="wrap_content"
+        android:text="edit"
+        android:layout_height="wrap_content" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/menuview"

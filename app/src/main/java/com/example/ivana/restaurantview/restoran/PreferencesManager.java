@@ -1,4 +1,4 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.restoran;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -37,25 +37,25 @@ public class PreferencesManager {
             "    \"rating\": \"2.5\",\n" +
             "    \"menu\": [\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://https://pbs.twimg.com/profile_images/2215476833/homa_logo_400x400.png\",\n" +
             "        \"price\": \"90\",\n" +
             "        \"foodname\": \"Cream Of Tomato Soup\",\n" +
             "        \"isveg\": true\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://https://pbs.twimg.com/profile_images/2215476833/homa_logo_400x400.png\",\n" +
             "        \"price\": \"90\",\n" +
             "        \"foodname\": \"Veg Clear Soup\",\n" +
             "        \"isveg\": true\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://https://pbs.twimg.com/profile_images/2215476833/homa_logo_400x400.png\",\n" +
             "        \"price\": \"90\",\n" +
             "        \"foodname\": \"Veg Hot &amp; Sour Soup\",\n" +
             "        \"isveg\": true\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://www.kineskirestoran.com.mk/images/menu/22_23.JPG\",\n" +
             "        \"price\": \"90\",\n" +
             "        \"foodname\": \"Veg Manchow Soup\",\n" +
             "        \"isveg\": true\n" +
@@ -63,37 +63,37 @@ public class PreferencesManager {
             "    ]\n" +
             "  },\n" +
             "  {\n" +
-            "    \"logo\": \"http://skopskimerak.mk/mk/img/cali-logo.png\",\n" +
+            "    \"logo\": \"http://www.kineskirestoran.com.mk/images/menu/22_23.JPG\",\n" +
             "    \"city\": \"Skopje\",\n" +
             "    \"name\": \"Skopski Merak\",\n" +
             "    \"rating\": \"3.5\",\n" +
             "    \"menu\": [\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://www.kineskirestoran.com.mk/images/menu/99_80.JPG\",\n" +
             "        \"price\": \"190\",\n" +
             "        \"foodname\": \"Пастрмајлија Свинска\",\n" +
             "        \"isveg\": false\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://www.kineskirestoran.com.mk/images/menu/99_80.JPG\",\n" +
             "        \"price\": \"180\",\n" +
             "        \"foodname\": \"Пастрмајлија Пилешка\",\n" +
             "        \"isveg\": false\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://bravos.mk/img/wel-2.png\",\n" +
             "        \"price\": \"220\",\n" +
             "        \"foodname\": \"Пастрмајлија Вегетерјанска\",\n" +
             "        \"isveg\": true\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://bravos.mk/img/wel-2.png\",\n" +
             "        \"price\": \"250\",\n" +
             "        \"foodname\": \"Телешки џигер\",\n" +
             "        \"isveg\": false\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/14.jpg\",\n" +
+            "        \"link\": \"http://bravos.mk/img/wel-2.png\",\n" +
             "        \"price\": \"330\",\n" +
             "        \"foodname\": \"Турли Тава\",\n" +
             "        \"isveg\": false\n" +
@@ -125,13 +125,13 @@ public class PreferencesManager {
             "        \"isveg\": false\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/27.jpg\",\n" +
+            "        \"link\": \"http://www.kineskirestoran.com.mk/images/menu/69_112.JPG\",\n" +
             "        \"price\": \"160\",\n" +
             "        \"foodname\": \"Цезар Салата\",\n" +
             "        \"isveg\": false\n" +
             "      },\n" +
             "      {\n" +
-            "        \"link\": \"http://skopskimerak.mk/mk/img/29.jpg\",\n" +
+            "        \"link\": \"http://www.kineskirestoran.com.mk/images/menu/69_112.JPG\",\n" +
             "        \"price\": \"190\",\n" +
             "        \"foodname\": \"Туна Салата\",\n" +
             "        \"isveg\": false\n" +

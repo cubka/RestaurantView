@@ -1,16 +1,21 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.restoran;
 
 import android.content.Intent;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ivana.restaurantview.MainNavigationActivity;
+import com.example.ivana.restaurantview.MenuDetali;
+import com.example.ivana.restaurantview.R;
+import com.example.ivana.restaurantview.meni.AddMenu;
+import com.example.ivana.restaurantview.meni.Menu;
+import com.example.ivana.restaurantview.meni.MenuAdapter;
+import com.example.ivana.restaurantview.meni.OnMenuClickListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -95,14 +100,35 @@ public class RestoranDetali extends AppCompatActivity {
             menuAdapter.notifyDataSetChanged();
 
 
+            }
+        else if (requestCode == 1003 && resultCode == RESULT_OK) {
+            restorandetali = PreferencesManager.getRestoran(this).restaurants.get(res_pos);
+            restoranDetaliIme.setText(restorandetali.getName());
+            restoranDetaliGrad.setText(restorandetali.getCity());
+            restoranDetaliOcena.setText(restorandetali.getRating());
+
+            menuAdapter.setItems(restorandetali.getMenu());
+            menuAdapter.notifyDataSetChanged();
+
+
         }
 
-    }
+
+        }
+
+
     @OnClick(R.id.galery)
     public void enterGalery (View viewGalery){
 
         Intent galery = new Intent(RestoranDetali.this,MainNavigationActivity.class);
         galery.putExtra("gp",res_pos);
         startActivity(galery);
+    }
+    @OnClick(R.id.edit_restoran)
+    public void editRestoran (View edit){
+        Intent editRest = new Intent(RestoranDetali.this, EditRestoran.class);
+        editRest.putExtra("edit_res",restorandetali);
+        editRest.putExtra("RE",res_pos);
+        startActivityForResult(editRest, 1003);
     }
 }

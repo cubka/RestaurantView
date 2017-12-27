@@ -1,4 +1,4 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.restoran;
 
 /**
  * Created by Ivana on 12/20/2017.

@@ -1,4 +1,6 @@
-package com.example.ivana.restaurantview;
+package com.example.ivana.restaurantview.restoran;
+
+import com.example.ivana.restaurantview.meni.Menu;
 
 import java.io.Serializable;
 import java.util.ArrayList;

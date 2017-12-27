@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/edna"
     tools:context="com.example.ivana.restaurantview.AddRestorani">
 
 
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
+        android:textColor="@color/leaf_brown"
         android:hint="Enter Restoran Name"
         android:layout_marginRight="10dp"/>
 
@@ -23,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dodajName"
         android:hint="Enter Restoran City"
+        android:textColor="@color/leaf_brown"
         android:layout_margin="10dp"/>
 
     <EditText
@@ -31,12 +34,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/dodajCity"
         android:hint="Enter Restoran Rating"
+        android:textColor="@color/leaf_brown"
+        android:inputType="numberDecimal"
         android:layout_margin="10dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/transedna"
         android:id="@+id/save"
+        android:textColor="@color/leaf_brown"
         android:layout_alignParentBottom="true"
         android:text="Save"/>
 

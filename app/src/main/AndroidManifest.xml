@@ -21,8 +21,9 @@
         <activity android:name=".AddRestorani" />
         <activity android:name=".RestoranDetali" />
         <activity android:name=".AddMenu" />
-        <activity android:name=".MenuDetali"></activity>
-        <activity android:name=".MainNavigationActivity"></activity>
+        <activity android:name=".MenuDetali" />
+        <activity android:name=".MainNavigationActivity" />
+        <activity android:name=".EditRestoran"></activity>
     </application>
 
 </manifest>

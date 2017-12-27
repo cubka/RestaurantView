@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.ivana.restaurantview.meni.Menu;
+import com.example.ivana.restaurantview.restoran.PreferencesManager;
+import com.example.ivana.restaurantview.restoran.Restorani;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
