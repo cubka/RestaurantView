@@ -19,7 +19,7 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
- * Created by tasev on 12/5/17.
+ * Created by Ivana on 12/18/2017.
  */
 
 public class FragmentMain extends Fragment {
